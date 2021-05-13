@@ -6,8 +6,10 @@ import { FaBars } from "react-icons/fa";
 import { CartButtons } from "../components";
 import logo from "../assets/logo.svg";
 import { links } from "../utils/constants";
+import { useProductsContext } from "../context/products_context";
 
 const Navbar = () => {
+  const {openSidebar} = useProductsContext()
   return (
     <NavContainer>
       <div className="nav-center">
@@ -15,7 +17,7 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="comfy sloth" />
           </Link>
-          <button type="button" className="nav-toggle">
+          <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
@@ -40,13 +42,11 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-
   .nav-center {
     width: 90vw;
     margin: 0 auto;
     max-width: var(--max-width);
   }
-
   .nav-header {
     display: flex;
     align-items: center;
@@ -56,7 +56,6 @@ const NavContainer = styled.nav`
       margin-left: -15px;
     }
   }
-
   .nav-toggle {
     background: transparent;
     border: transparent;
@@ -66,15 +65,12 @@ const NavContainer = styled.nav`
       font-size: 2rem;
     }
   }
-
   .nav-links {
     display: none;
   }
-
   .cart-btn-wrapper {
     display: none;
   }
-
   @media (min-width: 992px) {
     .nav-toggle {
       display: none;
@@ -101,9 +97,9 @@ const NavContainer = styled.nav`
         }
       }
     }
+    .cart-btn-wrapper {
+      display: grid;
+    }
   }
-  .cart-btn-wrapper {
-    display: grid;
-  }
-`;
+`
 export default Navbar;
