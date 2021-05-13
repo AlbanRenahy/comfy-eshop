@@ -13,7 +13,10 @@ const Footer = () => {
       </Container>
       <Container>
         <h5>
-          Made with <FaHeart className="heart-icon" /> by <a>Alban Renahy</a>
+          Made with <FaHeart className="heart-icon" /> by{" "}
+          <a href="http://albanrenahy.com" target="blank">
+            Alban Renahy
+          </a>
         </h5>
       </Container>
     </>
@@ -37,6 +40,12 @@ const Container = styled.footer`
     font-weight: 400;
     text-transform: none;
     line-height: 1.25;
+  }
+  a {
+    color: var(--clr-white);
+    &:hover {
+      color: var(--clr-primary-5);
+    }
   }
   .heart-icon {
     display: inline-block;
