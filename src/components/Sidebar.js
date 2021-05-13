@@ -6,9 +6,12 @@ import { Link } from 'react-router-dom'
 
 import { links } from "../utils/constants";
 import CartButtons from './CartButtons'
+import { useProductsContext } from "../context/products_context";
 
 const Sidebar = () => {
-  const isOpen = true;
+  const data = useProductsContext()
+  console.log(data)
+  const isOpen = false;
   return (
     <SidebarContainer>
       <aside className={`${isOpen ? "sidebar show-sidebar" : "sidebar"}`}>
