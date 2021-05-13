@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
+import { CartButtons } from "../components";
 import logo from "../assets/logo.svg";
-import { links } from '../utils/constants'
+import { links } from "../utils/constants";
 
 const Navbar = () => {
   return (
@@ -19,13 +20,16 @@ const Navbar = () => {
           </button>
         </div>
         <ul className="nav-links">
-        {links.map((link) => {
-          const {id, text, url} = link;
-          return <li key={id}>
-            <Link to={url}>{text}</Link>
-          </li>
-        })}
+          {links.map((link) => {
+            const { id, text, url } = link;
+            return (
+              <li key={id}>
+                <Link to={url}>{text}</Link>
+              </li>
+            );
+          })}
         </ul>
+        <CartButtons />
       </div>
     </NavContainer>
   );
@@ -67,6 +71,10 @@ const NavContainer = styled.nav`
     display: none;
   }
 
+  .cart-btn-wrapper {
+    display: none;
+  }
+
   @media (min-width: 992px) {
     .nav-toggle {
       display: none;
@@ -93,6 +101,9 @@ const NavContainer = styled.nav`
         }
       }
     }
+  }
+  .cart-btn-wrapper {
+    display: grid;
   }
 `;
 export default Navbar;
