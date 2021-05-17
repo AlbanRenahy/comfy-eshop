@@ -1,4 +1,7 @@
 import Hero from "./Hero";
+import Error from "./Error";
+import Loading from "./Loading";
+import Product from "./Product";
 import Navbar from "./Navbar";
 import Services from "./Services";
 import Sidebar from "./Sidebar";
@@ -9,6 +12,9 @@ import Contact from "./Contact";
 import FeaturedProducts from "./FeaturedProducts";
 export {
   Hero,
+  Error,
+  Loading,
+  Product,
   Services,
   Navbar,
   Sidebar,
