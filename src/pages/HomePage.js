@@ -1,7 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
-
+import { FeaturedProducts, Hero, Services, Contact } from '../components'
 const HomePage = () => {
-  return <h4>Home page</h4>
+  return (
+    <main>
+      <Hero />
+      <FeaturedProducts />
+      <Services />
+      <Contact />
+    </main>
+  )
 }
+
 export default HomePage
