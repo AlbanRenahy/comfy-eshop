@@ -12,6 +12,7 @@ import ProductImages from './ProductImages'
 import AddToCart from './AddToCart'
 import Stars from './Stars'
 import PageHero from './PageHero'
+import AmountButtons from './AmountButtons'
 export {
   FeaturedProducts,
   Navbar,
@@ -27,4 +28,5 @@ export {
   AddToCart,
   Stars,
   PageHero,
+  AmountButtons,
 }
