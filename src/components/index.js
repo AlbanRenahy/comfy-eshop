@@ -16,6 +16,7 @@ import AmountButtons from './AmountButtons'
 import ProductList from './ProductList'
 import GridView from './GridView'
 import ListView from './ListView'
+import Sort from './Sort'
 export {
   FeaturedProducts,
   Navbar,
@@ -34,5 +35,6 @@ export {
   AmountButtons,
   ProductList,
   GridView,
-  ListView
+  ListView,
+  Sort
 }
