@@ -3,7 +3,10 @@ import {
   SET_LISTVIEW,
   SET_GRIDVIEW,
   UPDATE_SORT,
-  SORT_PRODUCTS
+  SORT_PRODUCTS,
+  UPDATE_FILTERS,
+  CLEAR_FILTERS,
+  FILTER_PRODUCTS
 } from "../actions";
 
 const filter_reducer = (state, action) => {
@@ -63,8 +66,36 @@ const filter_reducer = (state, action) => {
         return b.name.localeCompare(a.name);
       });
     }
+    if (action.type === UPDATE_FILTERS) {
+      const { name, value } = action.payload
+      return { ...state, filters: { ...state.filters, [name]: value } }
+    }
 
     return { ...state, filtered_products: tempProducts };
+  }
+  if (action.type === FILTER_PRODUCTS) {
+    const { all_products } = state
+    const { text, category, company, color, price, shipping } = state.filters
+    let tempProducts = [...all_products]
+    if (text) {
+      tempProducts = tempProducts.filter((product) =>
+        product.name.toLowerCase().startsWith(text)
+      )
+    }
+  }
+  if (action.type === CLEAR_FILTERS) {
+    return {
+      ...state,
+      filters: {
+        ...state.filters,
+        text: '',
+        company: 'all',
+        category: 'all',
+        color: 'all',
+        price: state.filters.max_price,
+        shipping: false,
+      },
+    }
   }
   return state;
   throw new Error(`No Matching "${action.type}" - action type`);

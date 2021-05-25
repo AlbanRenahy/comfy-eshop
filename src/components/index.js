@@ -17,6 +17,7 @@ import ProductList from './ProductList'
 import GridView from './GridView'
 import ListView from './ListView'
 import Sort from './Sort'
+import Filters from './Filters'
 export {
   FeaturedProducts,
   Navbar,
@@ -36,5 +37,6 @@ export {
   ProductList,
   GridView,
   ListView,
-  Sort
+  Sort,
+  Filters
 }
