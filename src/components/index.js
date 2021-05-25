@@ -15,6 +15,7 @@ import PageHero from './PageHero'
 import AmountButtons from './AmountButtons'
 import ProductList from './ProductList'
 import GridView from './GridView'
+import ListView from './ListView'
 export {
   FeaturedProducts,
   Navbar,
@@ -32,5 +33,6 @@ export {
   PageHero,
   AmountButtons,
   ProductList,
-  GridView
+  GridView,
+  ListView
 }
