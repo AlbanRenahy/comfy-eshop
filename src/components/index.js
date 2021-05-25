@@ -13,6 +13,8 @@ import AddToCart from './AddToCart'
 import Stars from './Stars'
 import PageHero from './PageHero'
 import AmountButtons from './AmountButtons'
+import ProductList from './ProductList'
+import GridView from './GridView'
 export {
   FeaturedProducts,
   Navbar,
@@ -29,4 +31,6 @@ export {
   Stars,
   PageHero,
   AmountButtons,
+  ProductList,
+  GridView
 }
