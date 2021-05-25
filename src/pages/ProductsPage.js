@@ -7,6 +7,7 @@ const ProductsPage = () => {
       <PageHero title='products' />
       <Wrapper className='page'>
         <div className='section-center products'>
+          <Filters />
           <div>
         <Sort />
             <ProductList />
