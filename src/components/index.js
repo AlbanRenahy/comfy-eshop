@@ -10,14 +10,12 @@ import Loading from './Loading'
 import Error from './Error'
 import ProductImages from './ProductImages'
 import AddToCart from './AddToCart'
-import Stars from './Stars'
-import PageHero from './PageHero'
-import AmountButtons from './AmountButtons'
-import ProductList from './ProductList'
-import GridView from './GridView'
-import ListView from './ListView'
-import Sort from './Sort'
 import Filters from './Filters'
+import ProductList from './ProductList'
+import Sort from './Sort'
+import Stars from './Stars'
+import CartContent from './CartContent'
+import PageHero from './PageHero'
 export {
   FeaturedProducts,
   Navbar,
@@ -31,12 +29,10 @@ export {
   Error,
   ProductImages,
   AddToCart,
-  Stars,
-  PageHero,
-  AmountButtons,
+  Filters,
   ProductList,
-  GridView,
-  ListView,
   Sort,
-  Filters
+  Stars,
+  CartContent,
+  PageHero,
 }
