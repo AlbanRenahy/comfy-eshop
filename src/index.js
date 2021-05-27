@@ -5,14 +5,23 @@ import App from "./App";
 import { ProductsProvider } from "./context/products_context";
 import { FilterProvider } from "./context/filter_context";
 import { CartProvider } from "./context/cart_context";
+import { Auth0Provider } from "@auth0/auth0-react";
+//albanrenahy.eu.auth0.com
+//DjdWe5vtdQ2onmemyYNZLpCteKq4VmnG
 
 ReactDOM.render(
-  <ProductsProvider>
-    <FilterProvider>
-      <CartProvider>
-        <App />
-      </CartProvider>
-    </FilterProvider>
-  </ProductsProvider>,
+  <Auth0Provider
+    domain="albanrenahy.eu.auth0.com"
+    clientId="DjdWe5vtdQ2onmemyYNZLpCteKq4VmnG"
+    redirectUri={window.location.origin}
+  >
+    <ProductsProvider>
+      <FilterProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </FilterProvider>
+    </ProductsProvider>
+  </Auth0Provider>,
   document.getElementById("root")
 );
