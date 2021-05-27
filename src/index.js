@@ -14,14 +14,17 @@ ReactDOM.render(
     domain="albanrenahy.eu.auth0.com"
     clientId="DjdWe5vtdQ2onmemyYNZLpCteKq4VmnG"
     redirectUri={window.location.origin}
+    cacheLocation="localstorage"
   >
-    <ProductsProvider>
-      <FilterProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </FilterProvider>
-    </ProductsProvider>
+    <UserProvider>
+      <ProductsProvider>
+        <FilterProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </FilterProvider>
+      </ProductsProvider>
+    </UserProvider>
   </Auth0Provider>,
   document.getElementById("root")
 );
